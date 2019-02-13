@@ -93,6 +93,17 @@ public:
 	}
 };
 
+
+int add(int a, int b)
+{
+	_asm
+	{
+		MOV EAX, a
+			MOV ECX, b
+			ADD EAX, ECX
+	}
+}
+
 void TestFunc2(){
 		/*首先看十进制是如何做的： 5 + 7 = 12，三步走
 		第一步：相加各位的值，不算进位，得到2。
@@ -111,6 +122,7 @@ void TestFunc2(){
 		继续重复上述两步：1000 ^ 100 = 1100，进位值为0，跳出循环，1100为最终结果。*/
 
 	//不适用+/*-求两个数的和
+	cout<<add(2, 3)<<endl;
 	Solution_sum2 s;
 	cout << s.Add(2, 3) << endl;
 }
