@@ -23,7 +23,8 @@ public:
 //};
 
 void TestFunc(){
-
+	Solution s;
+	cout << s.Sum_Solution(3) << endl;
 }
 
 int main(){
