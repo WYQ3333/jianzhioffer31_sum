@@ -72,8 +72,26 @@ void TestFunc(){
 	cout << s.Sum_Solution(3) << endl;
 }
 
+class Solution_sum{
+public:
+	int Add(int num1, int num2){
+		while (num2 != 0){
+			int temp = num1^num2;
+			num2 = (num1&num2) << 1;
+			num1 = temp;
+		}
+		return num1;
+	}
+};
+
+void TestFunc2(){
+	//不适用+/*-求两个数的和
+	Solution_sum s;
+	cout << s.Add(2, 3) << endl;
+}
+
 int main(){
-	TestFunc();
+	TestFunc2();
 	system("pause");
 	return 0;
 }
