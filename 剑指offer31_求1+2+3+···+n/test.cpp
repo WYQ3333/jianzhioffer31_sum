@@ -96,6 +96,11 @@ public:
 
 int add(int a, int b)
 {
+	//__asm 关键字用于调用内联汇编程序，并且可在 C 或 C++ 语句合法时出现。 
+	//_asm是 __ASM 的同义词。
+	/*1、__asm与大括号一起使用，则该关键字表示大括号之间的每一行都是一条汇编语言语句。
+		如：
+		_asm　{ mov al, 2 　mov dx, 0xD007　out al, dx　 }*/
 	_asm
 	{
 		MOV EAX, a
